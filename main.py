@@ -92,7 +92,7 @@ if __name__ == '__main__':
     parser.add_argument('--train_sample_num', type=int, default=10000)
     parser.add_argument('--valid_sample_num', type=int, default=100)
     parser.add_argument('--char_max_size', type=int, default=256)
-    parser.add_argument('--char_min_size', type=int, default=32)
+    parser.add_argument('--char_min_size', type=int, default=160)
     args = parser.parse_args()
 
     args.output_dir_path = os.path.expanduser(args.output_dir_path)
