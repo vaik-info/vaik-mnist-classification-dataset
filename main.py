@@ -90,7 +90,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='main')
     parser.add_argument('--output_dir_path', type=str, default='~/.vaik-mnist-classification-dataset')
     parser.add_argument('--train_sample_num', type=int, default=10000)
-    parser.add_argument('--valid_sample_num', type=int, default=100)
+    parser.add_argument('--valid_sample_num', type=int, default=2000)
     parser.add_argument('--char_max_size', type=int, default=256)
     parser.add_argument('--char_min_size', type=int, default=160)
     args = parser.parse_args()
