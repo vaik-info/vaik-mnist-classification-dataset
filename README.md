@@ -10,7 +10,7 @@ Create Pascal VOC formatted MNIST classification dataset
 
 ```shell
 pip install -r requirements.txt
-python main.py --output_dir_path ~/.vaik-mnist-detection-dataset \
+python main.py --output_dir_path ~/.vaik-mnist-classification-dataset \
                 --train_sample_num 10000 \
                 --valid_sample_num 100 \
                 --char_max_size 256 \
