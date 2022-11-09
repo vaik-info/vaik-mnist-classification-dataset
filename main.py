@@ -54,9 +54,9 @@ def write(output_sub_dir_path, sample_num, char_max_size, char_min_size, x, y, c
         mnist_char_image = np.array(Image.fromarray(x[mnist_index]).resize((canvas.shape[1], canvas.shape[0])))
         mnist_char_image = np.clip((mnist_char_image > 125) * 255, 0, 255)
         for color_index in range(canvas.shape[2]):
-            canvas[:, :, 0] = mnist_char_image * random.randint(0, 255)
-            canvas[:, :, 1] = mnist_char_image * random.randint(0, 255)
-            canvas[:, :, 2] = mnist_char_image * random.randint(0, 255)
+            canvas[:, :, 0] = np.clip((mnist_char_image * random.uniform(0, 1)).astype(np.uint8), 0, 255)
+            canvas[:, :, 1] = np.clip((mnist_char_image * random.uniform(0, 1)).astype(np.uint8), 0, 255)
+            canvas[:, :, 2] =np.clip((mnist_char_image * random.uniform(0, 1)).astype(np.uint8), 0, 255)
 
         output_class_sub_dir_path = os.path.join(output_sub_dir_path, classes[y[mnist_index]])
         os.makedirs(output_class_sub_dir_path, exist_ok=True)
